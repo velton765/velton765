@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dcc04a8d29.js" crossorigin="anonymous"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet"> 
+    <title>pagina principal</title>
+    <style>body{
+        margin: 0%;
+        padding: 0%;
+        background: #272c2c;
+    }
+    
+    .btn-add input[type="submit"] {
+        top: 12%;
+        position: absolute;
+        left: 70%;
+        border: none;
+        height: 30px;
+        color: rgb(253, 254, 255);
+        background: rgb(34, 129, 224);
+        border-radius: 2px;
+        transition: 0.7s;
+        
+    }
+    
+
+    
+    input[type="date"] {
+        top: 60%;
+        left: 79%;
+        position: absolute;
+        border: white 5px;
+            border-bottom: 5px solid rgb(75, 85, 92);
+            background: rgb(75, 85, 92);
+            outline: none;
+            height: 20px;
+            color: rgba(29, 28, 28, 0.459);
+            font-size: 16px;
+            border-radius: 3px;
+              }
+    
+    input[type="time"]{
+        top: 12%;
+        color: white;
+        left: 87%;
+        position: absolute;
+        border: gray;
+        background: transparent;
+    }
+    
+    
+    h3{
+        top: 20%;
+        position: absolute;
+        left: 80%;
+        font-family: 'Abel', sans-serif;
+        color: white;
+    }
+    
+   
+    
+    a {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 20px;
+        color: gray;
+        transition: 0.4s;
+        left: 100%;
+        width:30px;
+        border-radius:3px;
+        height:30px;
+        position: absolute;
+        top: 20px;
+        font-family: 'Abel', sans-serif;
+        background-color:rgb(75, 85, 92);
+    }
+    a:hover{
+        transition: 0.2s;
+        color: #4d94ff;
+    
+    }
+
+    a0 {
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 20px;
+        color: gray;
+        transition: 0.4s;
+        left: 93%;
+        width:50px;
+        height:25px;
+        position: absolute;
+        top: 23%;
+        font-family: 'Abel', sans-serif;
+        
+    }
+    a0:hover{
+        transition: 0.2s;
+        color: #4d94ff;
+    
+    }
+
+    .btn-calendar{
+        color:white ;
+        top: 60%;
+        left: 77%;
+        position: absolute;
+        
+    }
+    
+    .nav_tabs{
+        top: 500px;
+        width: 830px;
+        height: 400px;
+        margin: 100px auto;
+        position: relative;
+        background-color: transparent;
+        border-radius: 10px;
+    }
+    
+    .nav_tabs ul{
+        list-style: none;
+    }
+    
+    .nav_tabs ul li{
+        float: left;
+    }
+    
+    .nav_tabs label{
+        width: 100px;
+        padding: 15px;
+        font-family: 'Abel', sans-serif;
+        display: block;
+        color: #fff;
+        cursor: pointer;
+        text-align: left;
+        
+    }
+    
+    .rd_tabs:checked ~ label{
+        background-color: rgb(39, 35, 35);
+    }
+    .rd_tabs{
+        display: none;
+    }
+    .contend{
+        border-top: 5px solid  rgb(39, 35, 35);
+        background-color:  rgb(39, 35, 35);
+        display: none;
+        position: absolute;
+        height: 2px;
+        width: 730px;
+        left: 5px;
+    
+    }
+
+     .rd_tabs:checked ~ .contend{
+         display: block;
+     }
+
+    .nav_bar{
+        width: 600px;
+        height: 30px;
+        margin: 10px auto;
+        position: relative;
+        background-color: rgb(17, 67, 173);
+        top: -70px;
+        left: -10px;
+        border-radius: 10px;
+      
+    }
+
+    .nav_bar ul{
+        list-style: none;
+    }
+
+    .nav_bar ul li{
+        float: left;
+    }
+
+    .nav_bar label{
+        font-family: 'Abel', sans-serif;
+        padding: 8px;
+        background-color: rgb(17, 67, 173);
+        display: block;
+        cursor: pointer;
+        text-align: center;
+       height: -0px;
+       width: 150px;
+       color: rgb(255, 255, 255);
+       
+        
+    }
+
+    .nav_bar:checked ~ label{
+        background-color: rgb(247, 239, 239);
+    }
+
+    .rd_bar:checked ~ .contend{
+        background-color:rgb(248, 238, 238) ;
+        top: 70px;
+        border-left: white;
+    }
+
+    .rd_bars{
+     display: none;
+     border-left: white;
+    }
+
+    .search-box{
+        position: absolute;
+        top: -1590%;
+        left: 5%;
+        background: transparent;
+        height: 40px;
+        border-radius: 40px;
+        padding: 10;
+    }
+
+    .search-btn{
+        color: rgb(39, 35, 35);
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: transparent;
+        display: flex;
+    }
+
+    .wrapper{
+        display: flex;
+        position: relative;
+        font-family: 'Abel', sans-serif;
+        
+    }
+     
+    .wrapper .sidebar{
+        position: fixed;
+        width: 250px;
+        height: 100%;
+        background: rgb(39, 35, 35);
+        padding: 30px 0;
+        top: 25px;
+        right: 1040px;
+        border-radius: 20px;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .wrapper .sidebar h2{
+        color: white;
+        font-family: 'Abel', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 30px;
+        position: absolute;
+        top: 90px;
+        left: 40px;
+    }
+    .wrapper .sidebar ul li{
+        padding: 15px;
+        border-top: 1px solid white;
+        font-family: 'Abel', sans-serif;
+        top: 160px;
+        position: relative;
+        cursor:pointer;
+       
+    }
+
+    .wrapper .sidebar ul li a{
+        color: white;
+        display: block;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .wrapper .sidebar ul li a .fas{
+        width: 25px;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .wrapper .sidebar ul li:hover{
+     background: rgba(107, 104, 104, 0.205);
+     font-family: 'Abel', sans-serif;
+     border-right: 1px solid white;
+        }
+    .wrapper .sidebar ul li:hover a{
+        color: white;
+        font-family: 'Abel', sans-serif;
+        background-color:#4d94ff;
+    }
+    a2 {
+        color: gray;
+        font-family: 'Abel', sans-serif;
+    }
+
+     a4{
+        color: gray;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+    a2:hover{
+        font-family: 'Abel', sans-serif;
+    }
+    
+    .wrapper .sidebar .social_media{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        top: 500px;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .wrapper .sidebar .social_media a{
+        display: block;
+        width: 40px;
+        background: gray;
+        height: 40px;
+        text-align: center;
+        margin: 0.5px;
+        color: gray;
+        border-top-left-radius:5px;
+        font-family: 'Abel', sans-serif;
+    }
+    .img0{
+        top: -0px;
+        width: 29px;
+        height: 28px;
+        left: 184px;
+        position: absolute;
+       border-radius: 50%;
+        }
+
+        .img2{
+        top: -0px;
+        width: 29px;
+        height: 28px;
+        left: 112px;
+        position: absolute;
+       border-radius: 50%;
+        }
+
+        .img3{
+        top: -0px;
+        width: 30px;
+        height: 30px;
+        left: 30px;
+        position: absolute;
+       border-radius: 50%;
+        }
+
+        .content article{
+            padding: 10px;
+        }
+        
+        p{
+           color: grey;
+            top: 120px;
+            left: 60px;
+            position: absolute;
+        }
+
+        .img1{
+        border-radius: 50%;
+        position: absolute;
+        left: 30px;
+        top: 5px;
+        }
+
+        .wrapper .sidebar li2{
+            top: 160px;
+            position: absolute;
+            font-family: 'Abel', sans-serif;
+            padding: 15px;
+        
+        }
+
+        .nav_bar li2{
+        float: left;
+    }
+
+    .wrapper .sidebar li2 a4{
+        display: block;
+        font-family: 'Abel', sans-serif;
+    }
+
+    .wrapper .sidebar li2 a5{
+        display: block;
+        color: white;
+        font-family: 'Abel', sans-serif;
+    }
+
+    li5{
+        color: gray;
+        position: absolute;
+        top: 175px;
+        left: 110px;
+    }
+
+    slider{
+        display: block;
+        width: 50%;
+        height: 50%;
+        background-color: #1f1f1f;
+        overflow: hidden;
+        position: absolute;
+        left: 300px;
+        top: 150px;
+    }
+
+    slider > *{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #1f1f1f;
+        animation: slide 12s infinite;
+        overflow: hidden;
+    }
+
+    slide:nth-child(1){
+        left: 0%;
+        animation-delay: -1s;
+        background-image: url(/home/veton/Downloads/legueoflegends942320.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    slide:nth-child(2){
+        animation-delay: 2s;
+        background-size: cover;
+        background-image: url(/home/veton/Downloads/csgo1409299.jpg);
+        background-position: center;
+    } 
+    
+    slide:nth-child(3){
+        animation-delay: 5s;
+        background-image: url(/home/veton/Downloads/valorant-1587043379933_v2_1920x1080.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    slide p8{
+        font-family: 'Abel', sans-serif;
+        font-size: 50px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        margin-top: 15px;
+        color: white;
+
+    }
+
+    @keyframes slide{
+        0%{ left: 100%; width: 100%;}
+        5%{ left: 0%;}
+        25%{ left: 0%;}
+        30%{ left: -100%; width: 100%;}
+        30.0001%{ left: -100%; width: 0%;}
+        100%{ left: 100%; width: 0%;}
+    }
+    a9{
+        color:white;
+        position:absolute;
+        top: 77px;
+        left:1000px;
+        background-color:red;
+        padding: 5px;
+        border-radius: 2px;
+        cursor:pointer;
+    }
+
+    a8{
+        color:white;
+        position:relative;
+        left:-5px;
+        font-family: 'Abel', sans-serif;
+        background-color: rgb(39, 35, 35);
+        border-radius:7px;
+        width:725px;
+        margin:5px;
+        border:none;
+        text-align:center;
+        text-decoration: none;
+        display:block;
+        top:-0px;
+        cursor:pointer;
+    }
+
+    input[name="data"] {
+        top: 10%;
+        left: 5%;
+        position: absolute;
+        border: white 5px;
+            border-bottom: 5px solid rgb(75, 85, 92);
+            background: rgb(75, 85, 92);
+            outline: none;
+            height: 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 100px;
+              }
+
+     
+              input[name="time2"] {
+              top: 10%;
+        left: 5%;
+        position: absolute;
+        border: white 5px;
+            border-bottom: 5px solid rgb(75, 85, 92);
+            background: rgb(75, 85, 92);
+            outline: none;
+            height: 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 100px;
+              }      
+
+    a10{
+        color:white;
+        position:relative;
+        left:150px;
+        font-family: 'Abel', sans-serif;
+        background-color: grey;
+        border-radius:7px;
+        width:725px;
+        height:250px;
+        margin:5px;
+        border:none;
+        text-align:center;
+        text-decoration: none;
+        display:block;
+        top:-0px;
+        cursor:pointer
+            }
+
+   a11{
+        color:white;
+        position:relative;
+        left:-5px;
+        font-family: 'Abel', sans-serif;
+        background-color:rgb(39, 35, 35);
+        border-radius:7px;
+        width:725px;
+        margin:10px;
+        border:none;
+        text-align:center;
+        text-decoration: none;
+        display:block;
+        top:-1px;
+        cursor:pointer;
+        overflow:auto;
+            }  
+
+    a11:hover{
+    background-color: white;
+    color:black;
+    border-color:red solid 10px;
+    }
+
+    a10:hover{
+    background-color: rgb(5, 30, 90);
+    color:black;
+    border:red ;
+    }    
+
+    a8:hover{
+    background-color: white;
+    color:black;
+    border-left: red 2px;
+    }
+
+    .Relogio {
+            top: 12%;
+            left: 87%;
+            position: absolute;
+            border: white 10px;
+            border-bottom: 5px solid  #272c2c;
+            background:  #272c2c;
+            outline: none;
+            height: 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 2px;
+            padding:5px;
+            font-family: 'Abel', sans-serif;
+              }         
+
+     .data0{
+            top: 60%;
+            left: 79%;
+            position: absolute;
+            border: white 10px;
+            border-bottom: 5px solid  #272c2c;
+            background:  #272c2c;
+            outline: none;
+            height: 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 3px;
+            padding:5px;
+            font-family: 'Ubuntu', sans-serif;
+            background-color:rgb(75, 85, 92);
+
+     }
+
+     .data {
+         color:rgb(60, 65, 75);
+         left:-200px;
+         position:relative;
+         font-family: 'Ubuntu', sans-serif;
+     }  
+
+     .relogio {
+         color:white;
+         left:-200px;
+         position:relative;
+         width:-200px;
+         font-family: 'Ubuntu', sans-serif;
+     } 
+
+    .relogio:hover{
+     color:red;
+     }    
+
+     .data:hover{
+         color:red;
+     }   
+
+       a4:hover{
+     color:white;
+     }
+
+    .resultado{
+        background-color:rgb(39, 35, 35);
+        border-radius:500px;
+        width:30px;
+        height:30px;
+        top:17px;
+        text-align:center;
+        position:absolute;
+        left:350px;
+    }
+
+    .resultado1{
+        background-color:rgb(39, 35, 35);
+        border-radius:500px;
+        width:30px;
+        height:30px;
+        top:17px;
+        text-align:center;
+        position:absolute;
+        left:350px;
+    }  
+
+    .resultado1:hover{
+        color:black;
+        background-color:white;
+    }
+
+    .resultado:hover{
+        color:black;
+        background-color:white;
+    }
+    video{
+        width:715px;
+        height:250px;
+        align:center;
+        decoration:block;
+    }
+
+    form2{
+        position:absolute;
+        top:-0px;
+    }
+
+    .img{
+        position:absolute;
+        top:10px;
+        left:40px;
+        width:100px;
+    }
+    </style>
+    
+</head>
+<body>
+    <slider>
+        <slide><p8>LOL</p8></slide>
+        <slide><p8>CSGO</p8></slide>
+        <slide><p8>Valorant</p8></slide>
+    </slider>
+    <div class="icons">
+<a href="#" class="btn-calendar"><i class="fas fa-calendar-week"></i></a>
+    </div>
+    <div class="btn-add">
+    </div>
+    <div class="Relogio", id="div_relogio"><input type="time" name="time"></div>
+    <div class="data0", id="div_data"><input type="date" name="data0"placeholder="dia" placeholder="mes" placeholder="ano" name="date"></div>
+    <div class="btn-all">
+       
+    </div>
+    <h3>Ranking TOP 10</h3>
+    <div class="btn-all-feed">
+        <a0 href= "login.html" >  Todos </a0> 
+    </div>
+    
+    <nav class="nav_tabs">
+        <ul>
+
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab0" checked>
+                <label for="tab0">Campeonatos</label>
+                <div class="contend">
+                <div class="scroll">
+                <a8 href="#"><br> Los Angeles    <div class="data", id="div_data2"><input type="data" name="data"></div> </a8> <br>
+                <a8 href="#"><br> Las Vegas City <div class="data", id="div_data3"><input type="data" name="data"></div> </a8> <br>
+                <a8 href="#"><br> New York       <div class="data", id="div_data4"><input type="data" name="data"></div> </a8> <br>
+                <a8 href="#"><br> Ashton         <div class="data", id="div_data5"><input type="data" name="data"></div> </a8> <br>
+                <a8 href="#"><br> New Orleans    <div class="data", id="div_data7"><input type="data" name="data"></div> </a8> <br>
+                <a8 href="#"><br> New Orleans    <div class="data", id="div_data8"><input type="data" name="data"></div> </a8> <br>
+                </div>
+               </li>
+
+            <li>
+             <input type="radio" name="tabs" class="rd_tabs" id="tab1" checked>
+             <label for="tab1">Todos os Jogos</label>
+             <div class="contend">
+                <a8 href="#">Ashton city  <br> <div class="resultado1">0:1</div> <br> New Orleans <div class="relogio", id="div_relogio15"> <input type="time"  name="time"></div> <div class="data", id="div_data15"><input type="data" name="data"> </div> </a8> <br>
+                <a8 href="#"> New orleans<br>  VS <br>  Los angeles <div class="relogio", id="div_relogio16"> <input type="time"  name="time"></div><div class="data", id="div_data16"><input type="data" name="data"> </div> </a8> <br>
+                <a8 href="#"> Las vegas <br><div class="resultado">2:4</div> <br> New york  <div class="relogio", id="div_relogio17"> <input type="time"  name="time"></div> <div class="data", id="div_data17"><input type="data" name="data"> </div> </a8> <br>
+                <a8 href="#"> New york <br>  VS <br>  Los angeles <div class="relogio", id="div_relogio19"> <input type="time"  name="time"></div>  <div class="data", id="div_data19"><input type="data" name="data"> </div> </a8> <br>
+             </div>
+            </li>
+    
+                <li>
+                 <input type="radio" name="tabs" class="rd_tabs" id="tab2" checked>
+                 <label for="tab2">Live de Jogos</label>
+                 <div class="contend"> 
+                <a11 href="#"> Ashton <br> VS <br> New Orleans<br></a11> <br> 
+                <a10 href="#"> <video src="/home/veton/Downloads/VKslima_1267754498610663424(480P).mp4"></video> LIVE</a10> <br>  
+                <a11 href="#"> New orleans <br> VS <br> Los angeles<br></a11> <br>
+                <a10 href="#">LIVE</a10> <br>
+                <a11 href="#"> Las vegas <br> VS <br> New york<br></a11> <br>
+                <a10 href="#">LIVE</a10> <br>
+                <a11 href="#"> Las vegas <br> VS <br> Los angeles<br></a11> <br>
+                <a10 href="#">LIVE</a10> <br> 
+                <a11 href="#"> New york <br> VS <br> Los angeles<br></a11> <br>
+                <a10 href="#">LIVE</a10> <br>
+                 </div>
+                </li>
+        
+
+            <li>
+             <input type="radio" name="tabs" class="rd_tabs" id="tab3" checked>
+             <label for="tab3">Acabando</label>
+             <div class="contend">
+                <a8 href="#"> Ashton  <br> VS <br> New Orleans       <div class="relogio", id="div_relogio2"> <input type="time"  name="time3"></div> </a8> <br>
+
+                <a8 href="#"> New orleans <br> VS <br> Los angeles <div class="relogio", id="div_relogio3"> <input type="time"  name="time3"></div> </a8> <br>
+
+                <a8 href="#"> Las vegas <br> VS <br>  New york       <div class="relogio", id="div_relogio4"> <input type="time"  name="time3"></div> </a8> <br>
+
+                <a8 href="#"> Las vegas <br> VS <br> Los angeles    <div class="relogio", id="div_relogio5"> <input type="time"  name="time3"></div> </a8> <br>
+
+                <a8 href="#"> New york <br>  VS <br> Los angeles    <div class="relogio", id="div_relogio6"> <input type="time"  name="time3"></div></a8> <br>
+             </div>
+            </li>
+            
+                <li>
+                 <input type="radio" name="tabs" class="rd_tabs" id="tab4" checked>
+                 <label for="tab4">Agendado</label>
+                 <div class="contend">
+                <a8 href="#">  Ashton <br> VS <br>  New Orleans          <div class="data", id="div_data10"><input type="date" name="data"></div> </a8> <br>
+                <a8 href="#">  New orleans <br> VS <br> Los angeles     <div class="data", id="div_data11"><input type="date" name="data"></div> </a8> <br>
+                <a8 href="#">  Las vegas <br> VS <br>  New york          <div class="data", id="div_data12"><input type="date" name="data"></div> </a8> <br>
+                <a8 href="#">  Las vegas <br>  VS <br> Los angeles       <div class="data", id="div_data13"><input type="date" name="data"></div> </a8> <br>
+                <a8 href="#">  New york <br> VS <br>  Los angeles         <div class="data", id="div_data14"><input type="date" name="data"></div> </a8> <br>
+                 </div>
+                </li>
+           
+    </nav>
+<nav class="nav_bar">
+    <div class="img0">
+        <img src="/home/veton/Downloads/LEGUE- OF-LEGENDS.jpg.png" class="img0" width="10px" height="10px"  alt="">
+      </div>
+      <div class="img2">
+        <img src="/home/veton/Downloads/valorant.png" class="img2" width="10px" height="10px" alt="">
+      </div>
+      <div class="img3"> 
+       <img src="/home/veton/Downloads/community_image_1390773014.png" class="img3" width="10px" height="10px" alt="">
+      </div>
+    <ul>
+        <li> 
+            <input type="radio" name="bars" class="rd_bars" id="bar1">
+            <label for="bar1">CS:GO</label>
+            <div class="content">
+            <article>
+            </article>
+            </div>
+
+        </li>
+        <li>
+            <input type="radio" name="bars" class="rd_bars" id="bar2">
+            <label for="bar2">Valorant</label>
+            <div class="content">
+                <article>
+                    
+                </article>
+            </div>
+
+        </li>
+        <li>
+            <input type="radio" name="bars" class="rd_bars" id="bar3">
+            <label for="bar3">LOL</label>
+            <div class="content">
+                <article>
+                    
+                </article>
+            </div>
+
+        </li>
+    </ul>
+     <input type="file" id="upload" />
+       <img id="img9" style="width:100px">
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+       crossorigin="anonymous">
+       </script>
+
+       <script>
+       $(function(){
+           $('#upload').change(function(){
+               const file = $(this)[0].files[0]
+               const fileReader = new FileReader()
+               fileReader.onloadend = function(){
+                 $('#img9').attr('src', fileReader.result)
+               }
+               fileReader.readAsDatasURL(file)
+           })
+       })
+       </script>
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="pesquisa">
+         <a0 class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+         </a>
+
+        </div>
+    </div>
+    <div class="wrapper">
+
+        <div class="sidebar">
+
+      
+
+             <h2>Velton Lopes</h2>
+             <p>Professional</p>
+             
+             <li2><a4 href="#">&nbsp; TOP#1</i> &nbsp; </a></li2><li5> &nbsp; 376 Pontos</i></li5> <br>
+             <ul>
+                 
+                <li><a4 href="#"><i class="fas fa-comments">Feed</i></a></li> <br><br>  <br>
+                <li><a4 href="#"><i class="fas fa-user">Perfil   </i></a></li> <br> <br> <br>
+                <li><a4 href="#"><i class="fas fa-trophy">Campeonatos</i></a></li> <br> <br> <br>
+                <li><a4 href="#"><i class="fas fa-medal">Ligas</i></a></li> <br> <br> <br>
+             </ul>
+             <div class="social_media">
+                <a2 href="#"><i class="fab fa-facebook-square"></i></a2>
+                <a2 href="#"><i class="fab fa-instagram"></i></a2>
+                <a2 href="#"><i class="fab fa-twitter"></i></a2>
+                </div>
+        </div>
+        <div class="main_content">
+            <div class="main_content"></div>
+            <div class="info">
+                <div></div>
+            </div>
+        </div>
+    </div>
+</nav>
+<a9 href="sair.php">sair</a9>
+</body>
+<script>
+function Relogio(){
+    var data = new Date();
+    var hr = data.getHours();
+    var min = data.getMinutes();
+    var s = data.getSeconds();
+
+    var tempo_total = hr + ":" + min + ":" + s;
+    var tempo = window.document.getElementById('div_relogio');
+    tempo.innerHTML = tempo_total;
+}
+
+setInterval(Relogio,500);
+
+function relogio(){
+    var data2 = new Date();
+    var hr2 = data2.getHours();
+    var min2 = data2.getMinutes();
+    var s2 = data2.getSeconds();
+
+    var tempo_total2 = hr2 + ":" + min2 + ":" + s2;
+    var tempo2 = window.document.getElementById('div_relogio2');
+    tempo2.innerHTML = tempo_total2;
+}
+
+setInterval(relogio,500);
+
+function relogio3(){
+    var data3 = new Date();
+    var hr3 = data3.getHours();
+    var min3 = data3.getMinutes();
+    var s3 = data3.getSeconds();
+
+    var tempo_total3 = hr3 + ":" + min3 + ":" + s3;
+    var tempo3 = window.document.getElementById('div_relogio3');
+    tempo3.innerHTML = tempo_total3;
+}
+
+setInterval(relogio3,500);
+
+function relogio4(){
+    var data4 = new Date();
+    var hr4 = data4.getHours();
+    var min4 = data4.getMinutes();
+    var s4 = data4.getSeconds();
+
+    var tempo_total4 = hr4 + ":" + min4 + ":" + s4;
+    var tempo4 = window.document.getElementById('div_relogio4');
+    tempo4.innerHTML = tempo_total4;
+}
+
+setInterval(relogio4,500);
+
+function relogio5(){
+    var data5 = new Date();
+    var hr5 = data5.getHours();
+    var min5 = data5.getMinutes();
+    var s5 = data5.getSeconds();
+
+    var tempo_total5 = hr5 + ":" + min5 + ":" + s5;
+    var tempo5 = window.document.getElementById('div_relogio5');
+    tempo5.innerHTML = tempo_total5;
+}
+
+setInterval(relogio5,500);
+
+function relogio6(){
+    var data6 = new Date();
+    var hr6 = data6.getHours();
+    var min6 = data6.getMinutes();
+    var s6 = data6.getSeconds();
+
+    var tempo_total6 = hr6 + ":" + min6 + ":" + s6;
+    var tempo6 = window.document.getElementById('div_relogio6');
+    tempo6.innerHTML = tempo_total6;
+}
+
+setInterval(relogio6,500);
+
+function data(){
+    var date = new Date();
+    var dia = date.getDate();
+    var mes = date.getMonth();
+    var ano = date.getFullYear();
+
+   
+
+    var data_total = dia + "/" + mes + "/" + ano;
+    var data = window.document.getElementById('div_data');
+    data.innerHTML = data_total;
+}
+
+setInterval(data,500);
+
+function data2(){
+    var date2 = new Date();
+    var dia2 = date2.getDate();
+    var mes2 = date2.getMonth();
+    var ano2 = date2.getFullYear();
+
+   
+
+    var data_total2 = dia2 + "/" + mes2 + "/" + ano2;
+    var data2 = window.document.getElementById('div_data2');
+    data2.innerHTML = data_total2;
+}
+
+setInterval(data2,500);
+
+function data3(){
+    var date3 = new Date();
+    var dia3 = date3.getDate();
+    var mes3 = date3.getMonth();
+    var ano3 = date3.getFullYear();
+
+   
+
+    var data_total3 = dia3 + "/" + mes3 + "/" + ano3;
+    var data3 = window.document.getElementById('div_data3');
+    data3.innerHTML = data_total3;
+}
+
+setInterval(data3,500);
+
+function data4(){
+    var date4 = new Date();
+    var dia4 = date4.getDate();
+    var mes4 = date4.getMonth();
+    var ano4 = date4.getFullYear();
+
+   
+
+    var data_total4 = dia4 + "/" + mes4 + "/" + ano4;
+    var data4 = window.document.getElementById('div_data4');
+    data4.innerHTML = data_total4;
+}
+
+setInterval(data4,500);
+
+function data5(){
+    var date5 = new Date();
+    var dia5 = date5.getDate();
+    var mes5 = date5.getMonth();
+    var ano5 = date5.getFullYear();
+
+   
+
+    var data_total5 = dia5 + "/" + mes5 + "/" + ano5;
+    var data5 = window.document.getElementById('div_data5');
+    data5.innerHTML = data_total5;
+}
+
+setInterval(data5,500);
+
+function data7(){
+    var date7 = new Date();
+    var dia7 = date7.getDate();
+    var mes7 = date7.getMonth();
+    var ano7 = date7.getFullYear();
+
+   
+
+    var data_total7 = dia7 + "/" + mes7 + "/" + ano7;
+    var data7 = window.document.getElementById('div_data7');
+    data7.innerHTML = data_total7;
+}
+
+setInterval(data7,500);
+
+function data8(){
+    var date8 = new Date();
+    var dia8 = date8.getDate();
+    var mes8 = date8.getMonth();
+    var ano8 = date8.getFullYear();
+
+    var data_total8 = dia8 + "/" + mes8 + "/" + ano8;
+    var data8 = window.document.getElementById('div_data8');
+    data8.innerHTML = data_total8;
+}
+
+setInterval(data8,500);
+
+function data14(){
+    var date14 = new Date();
+    var dia14 = date14.getDate();
+    var mes14 = date14.getMonth();
+    var ano14 = date14.getFullYear();
+
+    var data_total14 = dia14 + "/" + mes14 + "/" + ano14;
+    var data14 = window.document.getElementById('div_data14');
+    data14.innerHTML = data_total14;
+}
+
+setInterval(data14,500);
+
+function data10(){
+    var date10 = new Date();
+    var dia10 = date10.getDate();
+    var mes10 = date10.getMonth();
+    var ano10 = date10.getFullYear();
+
+    var data_total10 = dia10 + "/" + mes10 + "/" + ano10;
+    var data10 = window.document.getElementById('div_data10');
+    data10.innerHTML = data_total10;
+}
+
+setInterval(data10,500);
+
+function data11(){
+    var date11 = new Date();
+    var dia11 = date11.getDate();
+    var mes11 = date11.getMonth();
+    var ano11 = date11.getFullYear();
+
+    var data_total11 = dia11 + "/" + mes11 + "/" + ano11;
+    var data11 = window.document.getElementById('div_data11');
+    data11.innerHTML = data_total11;
+}
+
+setInterval(data11,500);
+
+function data12(){
+    var date12 = new Date();
+    var dia12 = date12.getDate();
+    var mes12 = date12.getMonth();
+    var ano12 = date12.getFullYear();
+
+    var data_total12 = dia12 + "/" + mes12 + "/" + ano12;
+    var data12 = window.document.getElementById('div_data12');
+    data12.innerHTML = data_total12;
+}
+
+setInterval(data12,500);
+
+function data13(){
+    var date13 = new Date();
+    var dia13 = date13.getDate();
+    var mes13 = date13.getMonth();
+    var ano13 = date13.getFullYear();
+
+    var data_total13 = dia13 + "/" + mes13 + "/" + ano13;
+    var data13 = window.document.getElementById('div_data13');
+    data13.innerHTML = data_total13;
+}
+
+setInterval(data13,500);
+
+function data15(){
+    var date15 = new Date();
+    var dia15 = date15.getDate();
+    var mes15 = date15.getMonth();
+    var ano15 = date15.getFullYear();
+
+    var data_total15 = dia15 + "/" + mes15 + "/" + ano15;
+    var data15 = window.document.getElementById('div_data15');
+    data15.innerHTML = data_total15;
+}
+
+setInterval(data15,500);
+
+function data16(){
+    var date16 = new Date();
+    var dia16 = date16.getDate();
+    var mes16 = date16.getMonth();
+    var ano16 = date16.getFullYear();
+
+    var data_total16 = dia16 + "/" + mes16 + "/" + ano16;
+    var data16 = window.document.getElementById('div_data16');
+    data16.innerHTML = data_total16;
+}
+
+setInterval(data16,500);
+
+function data17(){
+    var date17 = new Date();
+    var dia17 = date17.getDate();
+    var mes17 = date17.getMonth();
+    var ano17 = date17.getFullYear();
+
+    var data_total17 = dia17 + "/" + mes17 + "/" + ano17;
+    var data17 = window.document.getElementById('div_data17');
+    data17.innerHTML = data_total17;
+}
+
+setInterval(data17,500);
+
+function data19(){
+    var date19 = new Date();
+    var dia19 = date19.getDate();
+    var mes19 = date19.getMonth();
+    var ano19 = date19.getFullYear();
+
+    var data_total19 = dia19 + "/" + mes19 + "/" + ano19;
+    var data19 = window.document.getElementById('div_data19');
+    data19.innerHTML = data_total19;
+}
+setInterval(data19,500);
+
+function relogio15(){
+    var data15 = new Date();
+    var hr15 = data15.getHours();
+    var min15 = data15.getMinutes();
+    var s15 = data15.getSeconds();
+
+    var tempo_total15 = hr15 + ":" + min15 + ":" + s15;
+    var tempo15 = window.document.getElementById('div_relogio15');
+    tempo15.innerHTML = tempo_total15;
+}
+setInterval(relogio15,500);
+
+function relogio16(){
+    var data16 = new Date();
+    var hr16 = data16.getHours();
+    var min16 = data16.getMinutes();
+    var s16 = data16.getSeconds();
+
+    var tempo_total16 = hr16 + ":" + min16 + ":" + s16;
+    var tempo16 = window.document.getElementById('div_relogio16');
+    tempo16.innerHTML = tempo_total16;
+}
+setInterval(relogio16,500);
+
+function relogio17(){
+    var data17 = new Date();
+    var hr17 = data17.getHours();
+    var min17 = data17.getMinutes();
+    var s17 = data17.getSeconds();
+
+    var tempo_total17 = hr17 + ":" + min17 + ":" + s17;
+    var tempo17 = window.document.getElementById('div_relogio17');
+    tempo17.innerHTML = tempo_total17;
+}
+setInterval(relogio17,500);
+
+function relogio19(){
+    var data19 = new Date();
+    var hr19 = data19.getHours();
+    var min19 = data19.getMinutes();
+    var s19 = data19.getSeconds();
+
+    var tempo_total19 = hr19 + ":" + min19 + ":" + s19;
+    var tempo19 = window.document.getElementById('div_relogio19');
+    tempo19.innerHTML = tempo_total19;
+}
+setInterval(relogio19,500);
+</script>
+       
+</html>
