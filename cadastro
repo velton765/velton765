@@ -1,0 +1,172 @@
+<?php
+require_once '/run/user/1000/gvfs/google-drive:host=gmail.com,user=veltonlopesdealmeida78/1eAKkpBAvqPMwK-45viWg66qARnN_YeXN/133GJJfy6yvSTIsAXQHq5mRRllNitfPtL/1Swb5JxFzJ3T_GKDmXkkoA47RhxdNXzdS';
+$u = new Usuarios;
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+<link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<style>
+input{
+display:block;
+height: 40px;
+width: 250px;
+margin: 10px;
+border-radius: 10px;
+border: 1px;
+font-size: 12pt;
+padding: 1px 5px;
+background-color: rgba(255, 255, 255,0.05 );
+color: rgb(253, 250, 250);
+text-decoration: none;
+}
+
+body{
+background-color: black;
+font-family: 'Abel', sans-serif;
+}
+div#corpo-form{
+background-color: transparent;
+right: 500px;
+top: 180px;
+position: absolute;
+}
+
+div#corpo-form h1{
+color: white;
+text-align: center;
+padding: 20px;
+}
+
+a{
+color: white;
+text-decoration: none;
+display: block;
+}
+
+a:hover{
+color: rgb(93, 93, 230);
+text-decoration: underline;
+}
+
+input[type=submit]{
+background-color: white;
+color: black;
+cursor: pointer;
+}
+
+input[type=submit]:hover{
+background-color: rgb(33, 124, 243);
+color: black;
+cursor: pointer;
+}
+
+div#msg-sucesso{
+width: 250px;
+margin: 10px auto;
+color: white;
+position:absolute;
+top:400px;
+left:250px;
+background-color: rgba(100,900,110,.3);
+border: 1px solid rgba(100,800,110);
+padding: 5px;
+}
+
+div.msg-erro{
+width: 250px;
+margin: 10px auto;
+padding: 10px;
+top: 300px;
+left: 320px;
+color:white;
+background-color: rgba(850,100,100,.3);
+border: 1px solid rgba(850,100,100);
+position:relative;
+}
+</style>
+<title>Cadastrar/E-Sports</title>
+</head>
+<body>
+<div id="corpo-form">
+<h1>Cadastrar</h1>
+<form method="POST">
+<input type="text" name="nome" placeholder="Nome Completo" maxlength="30">
+<input type="text" name="telefone" placeholder="Telefone" maxlength="30">
+<input type="email" name="email" placeholder="Email" maxlength="40"> 
+<input type="password" name="senha" placeholder="Senha" maxlength="15">
+<input type="password" name="confSenha" placeholder="ConfirmarSenha" maxlength="15">
+<input type="submit" value="Cadastrar"> 
+</form>
+</div>
+<?php
+//verificar se clicou no botão 
+if(isset($_POST['nome']))
+{
+$nome = addslashes($_POST['nome']);
+$telefone = addslashes($_POST['telefone']);
+$email = addslashes($_POST['email']);
+$senha = addslashes($_POST['senha']);
+$confirmarsenha = addslashes($_POST['confSenha']);
+//verificar se esta preenchido
+if(!empty($nome) && !empty($telefone) && !empty($email) && !empty($senha) && !empty($confirmarSenha))
+{
+   $u->conectar("projeto_login","localhost","root","");
+   if($u->msgErro == "")
+   {
+       if($senha == $confirmarsenha)
+       {
+           if($u->cadastra($nome,$telefone,$email,$senha));
+       {
+       ?>
+          <div id="msg-sucesso">
+           Cadastrado com Sucesso acesse para entrar!
+          </div>
+       <?php
+}
+ }
+else
+{
+       ?>
+         <div class="msg-erro">
+          Email já cadastrado!
+         </div>
+       <?php
+}
+ }
+else
+{      ?>
+         <div class="msg-erro">
+          Senha e Confirmar senha não correspondem!
+         </div>
+      <?php
+
+} }
+else
+{
+      ?>
+         <div>
+           <?php echo "Erro: ".$u->msgErro;?>
+         </div>
+     <?php
+}
+}else
+{
+      ?>
+         <div class="msg-erro">
+           Preencha todos os campos!
+         </div> 
+      <?php
+}
+?>
+</div> 
+</body>
+</html>
